@@ -22,7 +22,8 @@
    * @param {*} inventors 
    */
   function addDiscoveries(inventor, discoveries, inventors){
-      
+    inventors.find( element => element.last === inventor)['discoveries'] = [...discoveries];
+    return inventors;
   }
 
   console.log(addDiscoveries('Einstein', 

@@ -4,11 +4,11 @@
  */
 
 const even = function(numbers){
-    
+    return numbers.filter(number => number % 2 === 0 );
 }
 
 const odd = function(numbers){
-
+    return numbers.filter(number => number % 2 === 1 );
 }
 
 // TESTS (no modificar)

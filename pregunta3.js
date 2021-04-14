@@ -2,8 +2,8 @@
 // Por ejemplo en: [4,3,4,5,1] el tercer mayor es 3
 // si la longitud del array es < 3 se debe retornar undefined
 
-const greater3 = nums => {
-    
+const greater3 = (nums) => {
+    return nums.length > 3 ? nums.sort( (a,b) => b-a ).filter( (value, index) => nums.indexOf(value) === index)[2] : undefined;
 }
 
 

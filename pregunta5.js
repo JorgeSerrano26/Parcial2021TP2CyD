@@ -20,3 +20,14 @@ const beers = [
     { name: 'Stolen Fruit', abv: 4.6, label: 'https://s3.amazonaws.com/brewerydbapi/beer/YGT30k/upload_uVCHP7-large.png', type: 'Wheat' },
 ];
 
+beers.forEach( e => {
+  const { label, name } = e;
+  const fileName = name.replace(" ", "") + '.png'; //Armo el nombre del archivo
+  const URL = 'https://tecnoshare.sharepoint.com/sites/beer/'; //Nueva url
+  const folder = label.split('/').reverse()[1]; //Obtengo la carpeta spliteando el label y obteniendo la carpeta
+  const newLabel = URL + folder + `/${fileName}`; // Concateno todo
+  e.label = newLabel; //Cambio el label
+});
+
+console.log(beers);
+
